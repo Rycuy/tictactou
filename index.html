@@ -7,35 +7,34 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Tic Tac Toe</h1>
+    <div class="game-container">
+        <h1 class="title">Tic Tac Toe</h1>
 
-    <!-- Form input nama -->
-    <div id="nameForm">
-        <input type="text" id="player1Name" placeholder="Nama Player 1 (X)">
-        <input type="text" id="player2Name" placeholder="Nama Player 2 (O)">
-        <button id="startBtn">Mulai Game</button>
+        <!-- Form input nama -->
+        <div id="nameForm" class="form-container">
+            <input type="text" id="player1Name" placeholder="Nama Player 1 (X)">
+            <input type="text" id="player2Name" placeholder="Nama Player 2 (O)">
+            <button id="startBtn">🎮 Mulai Game</button>
+        </div>
+
+        <!-- Status game -->
+        <div id="status" class="status-text" style="display:none;"></div>
+
+        <!-- Papan Tic Tac Toe -->
+        <div id="board" class="board" style="display:none;">
+            <div class="cell" data-index="0"></div>
+            <div class="cell" data-index="1"></div>
+            <div class="cell" data-index="2"></div>
+            <div class="cell" data-index="3"></div>
+            <div class="cell" data-index="4"></div>
+            <div class="cell" data-index="5"></div>
+            <div class="cell" data-index="6"></div>
+            <div class="cell" data-index="7"></div>
+            <div class="cell" data-index="8"></div>
+        </div>
+
+        <button id="resetBtn" style="display:none;">🔄 Reset</button>
     </div>
-
-    <!-- Status game -->
-    <div id="status" style="display:none;"></div>
-
-    <!-- Papan Tic Tac Toe -->
-    <div id="board" class="board" style="display:none;">
-        <div class="cell" data-index="0"></div>
-        <div class="cell" data-index="1"></div>
-        <div class="cell" data-index="2"></div>
-        <div class="cell" data-index="3"></div>
-        <div class="cell" data-index="4"></div>
-        <div class="cell" data-index="5"></div>
-        <div class="cell" data-index="6"></div>
-        <div class="cell" data-index="7"></div>
-        <div class="cell" data-index="8"></div>
-        <div class="cell" data-index="8"></div>
-        <div class="cell" data-index="8"></div>
-        <div class="cell" data-index="8"></div>
-    </div>
-
-    <button id="resetBtn" style="display:none;">Reset</button>
 
     <script src="script.js"></script>
 </body>

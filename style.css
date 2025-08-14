@@ -1,18 +1,55 @@
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background: #1a1a1a;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #1e1e2f, #2d2d44);
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
-h1 {
-    margin-bottom: 10px;
+.game-container {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    backdrop-filter: blur(8px);
+}
+
+.title {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.form-container input {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background: #ff4757;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #e84118;
 }
 
 .board {
     display: grid;
     grid-template-columns: repeat(3, 100px);
-    grid-gap: 5px;
+    grid-gap: 8px;
     justify-content: center;
     margin: 20px auto;
 }
@@ -20,41 +57,28 @@ h1 {
 .cell {
     width: 100px;
     height: 100px;
-    background: #333;
+    background: rgba(255,255,255,0.1);
     font-size: 2.5em;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    border-radius: 12px;
+    transition: 0.3s;
 }
 
 .cell:hover {
-    background: #444;
+    background: rgba(255,255,255,0.2);
 }
 
-#resetBtn, #startBtn {
-    padding: 10px 20px;
-    font-size: 1em;
-    background: #ff4757;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
+.win {
+    background: #2ed573 !important;
+    color: black;
 }
 
-#resetBtn:hover, #startBtn:hover {
-    background: #e84118;
-}
-
-#nameForm {
-    margin-top: 20px;
-}
-
-#nameForm input {
-    padding: 8px;
-    margin: 5px;
-    border-radius: 5px;
-    border: none;
+.status-text {
+    margin: 10px 0;
+    font-size: 1.2rem;
 }
 body {
     display: flex;
